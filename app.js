@@ -57,4 +57,17 @@ app.use(function(err, req, res, next) {
 });
 
 
+// basic session example
+var sess;
+app.get('/session-test', function(req, res){
+
+  sess=req.session;     // initialise the session based on 'req'
+
+  res.render('session', {
+
+  });
+
+
+});
+
 module.exports = app;
